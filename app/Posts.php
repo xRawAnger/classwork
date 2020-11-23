@@ -17,5 +17,9 @@ class Posts extends Model
     {
     	return $this->hasMany("App\Comments","post_id");
     }
+    public function autor()
+    {
+    	return $this->hasOne("App\Users","user_id");
+    }
 
 }

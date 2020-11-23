@@ -1,3 +1,3 @@
 <?php
 
-Route::get("get/total/likes","CalculatorController@calcLikes");
+Route::get("get/total/likes/{id?}","CalculatorController@calcLikes");
