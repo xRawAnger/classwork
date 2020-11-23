@@ -36,6 +36,9 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         $this->mapApiRoutes();
+        $this->vakoRoutes();
+        $this->levaniRoutes();
+        $this->lashaRoutes();
 
         $this->mapWebRoutes();
 
@@ -69,5 +72,23 @@ class RouteServiceProvider extends ServiceProvider
              ->middleware('api')
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
+    }
+
+    protected function vakoRoutes()
+    {
+        Route::namespace($this->namespace)
+             ->group(base_path('routes/vako.php'));
+    }
+
+    protected function levaniRoutes()
+    {
+        Route::namespace($this->namespace)
+             ->group(base_path('routes/levani.php'));
+    }
+
+    protected function lashaRoutes()
+    {
+        Route::namespace($this->namespace)
+             ->group(base_path('routes/lasha.php'));
     }
 }
