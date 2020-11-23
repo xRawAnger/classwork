@@ -9,6 +9,7 @@
 		<input type="text" name="name">
 		<input type="file" name="picture">
 		<textarea name="description"></textarea>
+		<button type="submit">Submit</button>
 	</form>
 </body>
 </html>
